@@ -1,0 +1,53 @@
+{
+  "entities": {
+    "WeddingConfig": {
+      "title": "Wedding Configuration",
+      "description": "Stores all customizable data for the wedding invitation.",
+      "type": "object",
+      "properties": {
+        "themeId": { "type": "string" },
+        "floralBgUrl": { "type": "string" },
+        "themeCustomBgMap": { "type": "object" },
+        "bgBrightness": { "type": "number" },
+        "showFallingFlowers": { "type": "boolean" },
+        "coverPhotoUrl": { "type": "string" },
+        "salamHeading": { "type": "string" },
+        "arabicDua": { "type": "string" },
+        "urduRomanDua": { "type": "string" },
+        "groomName": { "type": "string" },
+        "brideName": { "type": "string" },
+        "hostParentsLine": { "type": "string" },
+        "weddingDatesSummary": { "type": "string" },
+        "cityLabel": { "type": "string" },
+        "events": { "type": "array" },
+        "cardOpacity": { "type": "number" },
+        "cardBackgroundUrl": { "type": "string" },
+        "cornerStyle": { "type": "string" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      }
+    },
+    "RSVP": {
+      "title": "RSVP Response",
+      "description": "Stores guest attendance information.",
+      "type": "object",
+      "properties": {
+        "guestName": { "type": "string" },
+        "attending": { "type": "string", "enum": ["yes", "no"] },
+        "guestCount": { "type": "number" },
+        "events": { "type": "array" },
+        "submittedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["guestName", "attending", "submittedAt"]
+    }
+  },
+  "firestore": {
+    "settings/weddingConfig": {
+      "schema": "WeddingConfig",
+      "description": "The single document containing the app configuration."
+    },
+    "rsvps/{rsvpId}": {
+      "schema": "RSVP",
+      "description": "Collection of guest RSVP submissions."
+    }
+  }
+}

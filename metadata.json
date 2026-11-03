@@ -1,0 +1,6 @@
+{
+  "name": "Zayd & Ayla — Shahi Shadiama & Digital Wedding Invitation",
+  "description": "A royal South Asian emerald and gold interactive digital wedding invitation featuring a traditional Salam & Dua welcome curtain, live countdown timer, event itinerary, venue maps, ambient wedding audio, and interactive RSVP.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

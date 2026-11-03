@@ -1,0 +1,281 @@
+@import "tailwindcss";
+
+@layer base {
+  :root,
+  [data-wedding-theme="regal-crimson"] {
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-arabic: 'Amiri', serif;
+
+    --theme-bg: #22060C;
+    --theme-card: #380A15;
+    --theme-footer: #160308;
+    --theme-gold: #F5C542;
+    --theme-gold-light: #FDE68A;
+    --theme-text: #FFF8F6;
+    --theme-muted: #E6C8CE;
+    --theme-flower-1: #FB7185;
+    --theme-flower-2: #F59E0B;
+    --theme-flower-leaf: #34D399;
+  }
+
+  [data-wedding-theme="minimal-white"] {
+    --theme-bg: #F9FAFB;
+    --theme-card: #FFFFFF;
+    --theme-footer: #F3F4F6;
+    --theme-gold: #374151;
+    --theme-gold-light: #6B7280;
+    --theme-text: #111827;
+    --theme-muted: #4B5563;
+    --theme-flower-1: #6B7280;
+    --theme-flower-2: #9CA3AF;
+    --theme-flower-leaf: #3F6212;
+  }
+
+  [data-wedding-theme="golden-ochre"] {
+    --theme-bg: #451A03;
+    --theme-card: #78350F;
+    --theme-footer: #451A03;
+    --theme-gold: #FBBF24;
+    --theme-gold-light: #FDE68A;
+    --theme-text: #FFFBEB;
+    --theme-muted: #FCD34D;
+    --theme-flower-1: #F59E0B;
+    --theme-flower-2: #B45309;
+    --theme-flower-leaf: #A16207;
+  }
+
+  [data-wedding-theme="midnight-indigo"] {
+    --theme-bg: #1E1B4B;
+    --theme-card: #312E81;
+    --theme-footer: #1E1B4B;
+    --theme-gold: #C084FC;
+    --theme-gold-light: #E9D5FF;
+    --theme-text: #F5F3FF;
+    --theme-muted: #DDD6FE;
+    --theme-flower-1: #818CF8;
+    --theme-flower-2: #F472B6;
+    --theme-flower-leaf: #4338CA;
+  }
+
+  [data-wedding-theme="lavender-mist"] {
+    --theme-bg: #F5F3FF;
+    --theme-card: #FFFFFF;
+    --theme-footer: #EDE9FE;
+    --theme-gold: #8B5CF6;
+    --theme-gold-light: #A78BFA;
+    --theme-text: #2E1065;
+    --theme-muted: #6D28D9;
+    --theme-flower-1: #D8B4FE;
+    --theme-flower-2: #FBCFE8;
+    --theme-flower-leaf: #7C3AED;
+  }
+
+  [data-wedding-theme="teal-treasure"] {
+    --theme-bg: #042F2E;
+    --theme-card: #0D9488;
+    --theme-footer: #134E4A;
+    --theme-gold: #FB923C;
+    --theme-gold-light: #FDBA74;
+    --theme-text: #F0FDFA;
+    --theme-muted: #CCFBF1;
+    --theme-flower-1: #2DD4BF;
+    --theme-flower-2: #FB7185;
+  [data-wedding-theme="pink-watercolor"] {
+    --theme-bg: #831843;
+    --theme-card: #9D174D;
+    --theme-footer: #701A40;
+    --theme-gold: #F472B6;
+    --theme-gold-light: #FBCFE8;
+    --theme-text: #FFF1F2;
+    --theme-muted: #FCE7F3;
+    --theme-flower-1: #FDA4AF;
+    --theme-flower-2: #F472B6;
+    --theme-flower-leaf: #34D399;
+  }
+
+  [data-wedding-theme="rose-gold"] {
+    --theme-bg: #4C0519;
+    --theme-card: #881337;
+    --theme-footer: #310410;
+    --theme-gold: #F5C542;
+    --theme-gold-light: #FDE68A;
+    --theme-text: #FFF1F2;
+    --theme-muted: #FECDD3;
+    --theme-flower-1: #FB7185;
+    --theme-flower-2: #F43F5E;
+    --theme-flower-leaf: #059669;
+  }
+}
+
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--theme-bg);
+    color: var(--theme-text);
+    overflow-x: hidden;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+
+  h1, h2, h3, .font-serif-display {
+    font-family: var(--font-display);
+  }
+
+  .font-arabic {
+    font-family: var(--font-arabic);
+  }
+
+  .font-mono-tabular {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Dynamic Theme Surface & Accent Bindings */
+.bg-\[\#061812\] { background-color: var(--theme-bg) !important; }
+.bg-\[\#061812\]\/95 { background-color: color-mix(in srgb, var(--theme-bg) 95%, transparent) !important; }
+.bg-\[\#061812\]\/85 { background-color: color-mix(in srgb, var(--theme-bg) 85%, transparent) !important; }
+.bg-\[\#061812\]\/80 { background-color: color-mix(in srgb, var(--theme-bg) 80%, transparent) !important; }
+.bg-\[\#061812\]\/70 { background-color: color-mix(in srgb, var(--theme-bg) 70%, transparent) !important; }
+.bg-\[\#061812\]\/65 { background-color: color-mix(in srgb, var(--theme-bg) 65%, transparent) !important; }
+.bg-\[\#061812\]\/60 { background-color: color-mix(in srgb, var(--theme-bg) 60%, transparent) !important; }
+.bg-\[\#061812\]\/55 { background-color: color-mix(in srgb, var(--theme-bg) 55%, transparent) !important; }
+
+.bg-\[\#0B2B22\] { background-color: var(--theme-card) !important; }
+.bg-\[\#0B2B22\]\/95 { background-color: color-mix(in srgb, var(--theme-card) 95%, transparent) !important; }
+.bg-\[\#0B2B22\]\/90 { background-color: color-mix(in srgb, var(--theme-card) 90%, transparent) !important; }
+
+.bg-\[\#D4AF37\] { background-color: var(--theme-gold) !important; }
+.text-\[\#D4AF37\] { color: var(--theme-gold) !important; }
+.text-\[\#F3E5AB\] { color: var(--theme-gold-light) !important; }
+.text-\[\#FBF7EE\] { color: var(--theme-text) !important; }
+.text-\[\#C8C2B4\] { color: var(--theme-muted) !important; }
+.border-\[\#D4AF37\] { border-color: var(--theme-gold) !important; }
+
+.floral-damask-bg {
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 10c2 5 5 7 10 8-5 1-7 4-8 10-1-6-4-9-10-10 6-1 9-3 8-8z' fill='%23D4AF37' fill-opacity='0.04'/%3E%3Ccircle cx='10' cy='10' r='1.5' fill='%23D4AF37' fill-opacity='0.03'/%3E%3Ccircle cx='90' cy='90' r='1.5' fill='%23D4AF37' fill-opacity='0.03'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+@keyframes flowerFall {
+  0% {
+    transform: translate3d(0px, -12vh, 0px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.92;
+  }
+  50% {
+    transform: translate3d(26px, 50vh, 0px) rotate(180deg);
+    opacity: 0.92;
+  }
+  90% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translate3d(-18px, 110vh, 0px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.animate-flower-fall {
+  animation-name: flowerFall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-flower-fall {
+    animation: none;
+  }
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 10mm;
+  }
+
+  body {
+    background-color: #061812 !important;
+    color: #FBF7EE !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only-sheet {
+    display: block !important;
+  }
+}
+
+@keyframes handClick {
+  0%, 100% { transform: translateY(0) scale(1) rotate(-12deg); }
+  50% { transform: translateY(-15px) scale(0.9) rotate(-15deg); }
+}
+
+.animate-hand-click {
+  animation: handClick 1.5s ease-in-out infinite;
+}
+
+@keyframes textShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-text-shimmer {
+  background: linear-gradient(90deg, #FBF7EE 0%, #FFF8D6 25%, #FFFFFF 50%, #FFF8D6 75%, #FBF7EE 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: textShimmer 3.5s ease-in-out infinite;
+}
+
+.animate-text-shimmer-gold {
+  background: linear-gradient(90deg, #F3E5AB 0%, #FFF5C0 25%, #FFFFFF 50%, #FFF5C0 75%, #F3E5AB 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: textShimmer 3.5s ease-in-out infinite 1.75s;
+}
+
+@keyframes borderPulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3), inset 0 0 12px rgba(212, 175, 55, 0.15);
+    border-color: rgba(212, 175, 55, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 28px rgba(245, 197, 66, 0.65), inset 0 0 20px rgba(245, 197, 66, 0.3);
+    border-color: rgba(245, 197, 66, 0.85);
+  }
+}
+
+.animate-border-glow {
+  animation: borderPulseGlow 3s ease-in-out infinite;
+}
+
+

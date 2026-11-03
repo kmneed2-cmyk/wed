@@ -1,0 +1,46 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Default deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isSignedIn() && 
+             request.auth.token.email == 'km@gmail.com' && 
+             request.auth.token.email_verified == true;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    // Wedding Config Rules
+    match /settings/weddingConfig {
+      allow read: if true; // Publicly readable for guests
+      allow write: if isAdmin();
+    }
+
+    // RSVP Rules
+    match /rsvps/{rsvpId} {
+      allow create: if true; // Guests can RSVP
+      allow read: if isAdmin();
+      allow list: if isAdmin();
+      allow update, delete: if isAdmin();
+    }
+  }
+}
